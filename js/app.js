@@ -96,14 +96,6 @@
             "type" : 'day',
             "count" : 1,
             "text" : '1D'
-        }, {
-          "type" : 'week',
-          "count" : 1,
-          "text" : '1W'
-      }, {
-          "type" : 'month',
-          "count" : 1,
-          "text" : '1M'
       }, {
             "type" : 'all',
             "count" : 1,
@@ -241,7 +233,7 @@
 
       var xhr = new XMLHttpRequest();
       xhr.onreadystatechange = process;
-  		xhr.open("GET", "https://api.rsbuddy.com/grandExchange?i=" + getItem(item,"id") + "&a=graph&g=30&start=" + startTime.toString(), true);
+  		xhr.open("GET", "https://api.rsbuddy.com/grandExchange?i=" + getItem(item,"id") + "&a=graph&g=10&start=" + startTime.toString(), true);
   		xhr.send();
 
       pData.length = 0;

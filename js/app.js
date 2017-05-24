@@ -256,8 +256,8 @@
   						pData.push({
   							"x" : resp[i].ts,
   							"open" : resp[i].overallPrice,
-  							"high" : resp[i].buyingPrice,
-  							"low" : resp[i].sellingPrice,
+  							"high" : resp[i].sellingPrice,
+  							"low" : resp[i].buyingPrice,
   							"close" : resp[i].sellingPrice
   						})
   					} else {

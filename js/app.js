@@ -6,6 +6,16 @@
   var bData = [];
   var sData = [];
 
+  function returnmargin(highs, lows){
+     var margins = highs - lows;
+     if(highs > lows) {
+       var formatted_margins = '<b>+<font color="green">' + numberWithCommas(margins) + '</font></b>';
+     } else {
+       var formatted_margins = '<b>-<font color="red">' + numberWithCommas(margins) + '</font></b>';
+     }
+  return formatted_margins;
+  }
+
   // For updating item list via https://rsbuddy.com/exchange/names.json
   // var names = ouputfromnames.json
   // var newnames = [];
@@ -208,16 +218,6 @@
 
   function numberWithCommas(x) {
       return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  }
-
-  function returnmargin(highs, lows){
-     var margins = highs - lows;
-     if(highs < lows) {
-       var formatted_margins = '<b>+<font color="green">' + numberswithCommas(margins) + '</font></b>';
-     } else {
-       var formatted_margins = '<b>-<font color="red">' + numberswithCommas(margins) + '</font></b>';
-     }
-  return formatted_margins;
   }
 
   $(function() {

@@ -80,10 +80,10 @@
             var d = new Date(p.x).toString();
             if(typeof p.close !== "undefined") {
             return '<b>' + d.substring(0, 21) + '<b/><br/>'+
-                   'Overall: ' + numberWithCommas(p.open) +' GP<br/>'+
                    'Offer/Buying: ' + numberWithCommas(p.high) + ' GP<br/>'+
+                   'Overall: ' + numberWithCommas(p.open) +' GP<br/>'+
                    'Sell: ' + numberWithCommas(p.low) + ' GP<br/>'+
-                   'Control ' + returnmargin(p.high, p.open, p.low) + ' Control High';
+                   returnmargin(p.high, p.open, p.low) + ' Control High';
               } else {
             return '<b>' + d.substring(0, 21) + '<b/><br/>'+
                    'Volume: ' + numberWithCommas(p.y) + ' traded<br/>';

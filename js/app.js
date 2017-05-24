@@ -6,11 +6,6 @@
   var bData = [];
   var sData = [];
 
-  function returnmargin(highs, lows){
-      var margins = highs - lows;
-  return margins;
-  }
-
   // For updating item list via https://rsbuddy.com/exchange/names.json
   // var names = ouputfromnames.json
   // var newnames = [];
@@ -74,7 +69,7 @@
                    'High: ' + numberWithCommas(p.high) + ' GP<br/>'+
                    'Low: ' + numberWithCommas(p.low) + ' GP<br/>'+
                    'Close: ' + numberWithCommas(p.close) + ' GP<br/>'+
-                   'Margin: ' + numberWithCommas(returnmargin(p.high, p.low)) + ' GP<br/>';
+                   'Margin: ' + returnmargin(p.high, p.low) + ' GP<br/>';
               } else {
             return '<b>' + d.substring(0, 21) + '<b/><br/>'+
                    'Volume: ' + numberWithCommas(p.y) + ' traded<br/>';
@@ -213,6 +208,16 @@
 
   function numberWithCommas(x) {
       return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
+
+  function returnmargin(highs, lows){
+     var margins = highs - lows;
+     if(highs < lows) {
+       var formatted_margins = '<b>+<font color="green">' + numberswithCommas(margins) + '</font></b>';
+     } else {
+       var formatted_margins = '<b>-<font color="red">' + numberswithCommas(margins) + '</font></b>';
+     }
+  return formatted_margins;
   }
 
   $(function() {

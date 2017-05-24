@@ -6,18 +6,18 @@
   var bData = [];
   var sData = [];
 
-  function returnmargin(highs, opens, lows){
-    var buyPlus = opens + highs;
+  function returnmargin(highs, opens, lows) {
+    var buyingPlus = opens + highs;
     var sellPlus = opens + lows;
-    var margins = {
-        if(buyPlus > sellPlus) {
+    var margins = []; 
+        if(buyingPlus > sellPlus) {
            'Bullish - Buyers Control';
           } else {
            'Bearish - Sellers Control';
           } else {
            'Doji - Equal'; 
           }
-  }
+        
   return margins;
   }
 

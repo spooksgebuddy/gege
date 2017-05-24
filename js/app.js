@@ -6,6 +6,12 @@
   var bData = [];
   var sData = [];
 
+
+  function returnmargin(x, y){
+      var z = x - y;
+  return z
+  }
+
   // For updating item list via https://rsbuddy.com/exchange/names.json
   // var names = ouputfromnames.json
   // var newnames = [];
@@ -208,11 +214,6 @@
 
   function numberWithCommas(x) {
       return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  }
-
-  function returnmargin(x, y){
-      var z = x - y;
-  return z
   }
 
   $(function() {

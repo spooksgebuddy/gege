@@ -6,6 +6,10 @@
   var bData = [];
   var sData = [];
 
+function returnmargin(high, low)[
+ var margin = high - low;
+ return margin
+ ]
   // For updating item list via https://rsbuddy.com/exchange/names.json
   // var names = ouputfromnames.json
   // var newnames = [];
@@ -68,7 +72,8 @@
                    'Open: ' + numberWithCommas(p.open) +' GP<br/>'+
                    'High: ' + numberWithCommas(p.high) + ' GP<br/>'+
                    'Low: ' + numberWithCommas(p.low) +' GP<br/>'+
-                   'Close: ' + numberWithCommas(p.close) + ' GP<br/>';
+                   'Current Price: ' + numberWithCommas(p.close) + ' GP<br/>'+
+                   'Margin: ' + returnmargin(p.high, p.low) + ' GP<br/>';
               } else {
             return '<b>' + d.substring(0, 21) + '<b/><br/>'+
                    'Volume: ' + numberWithCommas(p.y) + ' traded<br/>';

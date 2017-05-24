@@ -9,9 +9,9 @@
   function returnmargin(opens, closes){
     var margins = 0; 
     if (opens > closes) {
-          margins = 'Bullish'
+          margins = 'Bullish - sellers control'
      } else {
-          margins = 'Bearish'
+          margins = 'Bearish - buyers control'
   return margins;
   }
 
@@ -78,7 +78,7 @@
                    'High: ' + numberWithCommas(p.high) + ' GP<br/>'+
                    'Low: ' + numberWithCommas(p.low) + ' GP<br/>'+
                    'Close: ' + numberWithCommas(p.close) + ' GP<br/>'+
-                   'Margin: ' + numberWithCommas(returnmargin(p.high, p.low)) + ' GP<br/>';
+                   'Margin: ' + numberWithCommas(returnmargin(p.open, p.close)) + ' GP<br/>';
               } else {
             return '<b>' + d.substring(0, 21) + '<b/><br/>'+
                    'Volume: ' + numberWithCommas(p.y) + ' traded<br/>';
@@ -90,7 +90,7 @@
     },
     "rangeSelector" : {
         "selected" : 1, 
-        "inputEnabled": false,
+        "inputEnabled": true,
         "buttonPosition": {x:160,y:50 },
         "allButtonsEnabled": true,
         "enabled": true,
@@ -263,8 +263,6 @@
   							"high" : resp[i].sellingPrice,
   							"low" : resp[i].buyingPrice,
   							"close" : resp[i].overallPrice,
-                "selling" : resp[i].sellingPrice,
-                "buying" : resp[i].buyingPrice
   						})
   					} else {
   						pData.push({
@@ -273,8 +271,6 @@
   							"high" : resp[i].buyingPrice,
   							"low" : resp[i].sellingPrice,
   							"close" : resp[i].overallPrice
-                "selling" : resp[i].sellingPrice,
-                "buying" : resp[i].buyingPrice
   						})
   					}
 

@@ -6,8 +6,17 @@
   var bData = [];
   var sData = [];
 
-  function returnmargin(highs, lows){
-     var margins = highs - lows;
+  function returnmargin(highs, opens, lows){
+    var buyPlus = opens + highs;
+    var sellPlus = opens + lows;
+    var margins = 
+        if(buyPlus > sellPlus) {
+           'Bullish - Buyers Control';
+          }  if else {
+           'Bearish - Sellers Control';
+          } else {
+           'Doji - Equal'; 
+          }
   return margins;
   }
 
@@ -70,10 +79,10 @@
             var d = new Date(p.x).toString();
             if(typeof p.close !== "undefined") {
             return '<b>' + d.substring(0, 21) + '<b/><br/>'+
-                   'Open: ' + numberWithCommas(p.open) +' GP<br/>'+
                    'High: ' + numberWithCommas(p.high) + ' GP<br/>'+
+                   'Overall: ' + numberWithCommas(p.open) +' GP<br/>'+
                    'Low: ' + numberWithCommas(p.low) + ' GP<br/>'+
-                   'Margin: ' + numberWithCommas(returnmargin(p.high, p.low)) + ' GP<br/>';
+                   'Control ' + returnmargin(p.high, p.open, p.low);
               } else {
             return '<b>' + d.substring(0, 21) + '<b/><br/>'+
                    'Volume: ' + numberWithCommas(p.y) + ' traded<br/>';
@@ -179,7 +188,7 @@
     },
     "series": [
       {
-        "type": 'ohlc',
+        "type": 'candlestick',
         "name": "Prices",
         "data": pData
       },{

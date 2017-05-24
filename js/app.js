@@ -6,9 +6,9 @@
   var bData = [];
   var sData = [];
 
-  function returnmargin(highs, opens, lows) {
-    var buyingPlus = opens + highs;
-    var sellPlus = opens + lows;
+  function returnmargin(highs, overalls, lows) {
+    var buyingPlus = lows - highs;
+    var sellPlus = lows - overalls;
     var bullish = 'bullish';
     var bearish = 'bearish';
     var doji = 'doji';

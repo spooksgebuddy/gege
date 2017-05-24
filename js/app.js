@@ -6,8 +6,12 @@
   var bData = [];
   var sData = [];
 
-  function returnmargin(highs, lows){
-     var margins = highs - lows;
+  function returnmargin(opens, closes){
+    var margins = 0; 
+    if (opens > closes) {
+          margins = 'Bullish'
+     } else {
+          margins = 'Bearish'
   return margins;
   }
 
@@ -258,7 +262,9 @@
   							"open" : resp[i].overallPrice,
   							"high" : resp[i].sellingPrice,
   							"low" : resp[i].buyingPrice,
-  							"close" : resp[i].overallPrice
+  							"close" : resp[i].overallPrice,
+                "selling" : resp[i].sellingPrice,
+                "buying" : resp[i].buyingPrice
   						})
   					} else {
   						pData.push({
@@ -267,6 +273,8 @@
   							"high" : resp[i].buyingPrice,
   							"low" : resp[i].sellingPrice,
   							"close" : resp[i].overallPrice
+                "selling" : resp[i].sellingPrice,
+                "buying" : resp[i].buyingPrice
   						})
   					}
 

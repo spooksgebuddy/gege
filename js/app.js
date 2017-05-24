@@ -167,7 +167,12 @@
       "#43a2ca" //sold
     ],
     "plotOptions": {
-      "series": {
+      "candlestick": {
+	    		"lineColor": '#2f7ed8',	    		
+	    		"upLineColor": 'silver',
+	    		"upColor": 'silver'
+	    	}
+       "series": { 
           "allowPointSelect": true,
           "turboThreshold": 1000000,
           "point": {

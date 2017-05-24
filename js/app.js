@@ -9,7 +9,7 @@
   function returnmargin(highs, opens, lows){
     var buyPlus = opens + highs;
     var sellPlus = opens + lows;
-    var margins = 
+    var margins = {
         if(buyPlus > sellPlus) {
            'Bullish - Buyers Control';
           } else {
@@ -17,6 +17,7 @@
           } else {
            'Doji - Equal'; 
           }
+  }
   return margins;
   }
 

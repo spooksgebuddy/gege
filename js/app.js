@@ -67,7 +67,7 @@
             return '<b>' + d.substring(0, 21) + '<b/><br/>'+
                    'Open: ' + numberWithCommas(p.open) +' GP<br/>'+
                    'High: ' + numberWithCommas(p.high) + ' GP<br/>'+
-                   'Low: ' + numberWithCommas(p.low) +' GP<br/>'
+                   'Low: ' + numberWithCommas(p.low) +' GP<br/>'+
                    'Close: ' + numberWithCommas(p.close) + ' GP<br/>';
               } else {
             return '<b>' + d.substring(0, 21) + '<b/><br/>'+

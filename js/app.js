@@ -9,9 +9,9 @@
   function returnmargin(highs, overalls, lows) {
     var buyingPlus = overalls - highs;
     var sellPlus = overalls - lows;
-    var bullish = 'bullish: Buyers';
-    var bearish = 'bearish: Sellers';
-    var doji = 'doji: Equal';
+    var bullish = 'Bullish: Buyers';
+    var bearish = 'Bearish: Sellers';
+    var doji = 'Doji: Equal';
         if(buyingPlus > sellPlus) {
            return bullish;
           } else if(buyingPlus < sellPlus) {

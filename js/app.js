@@ -20,8 +20,6 @@
            return doji; 
           }
       }
-        
-  return margins;
   }
 
   // For updating item list via https://rsbuddy.com/exchange/names.json

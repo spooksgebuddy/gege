@@ -233,7 +233,7 @@
 
       var xhr = new XMLHttpRequest();
       xhr.onreadystatechange = process;
-  		xhr.open("GET", "https://api.rsbuddy.com/grandExchange?i=" + getItem(item,"id") + "&a=graph&g=30&start=" + startTime.toString(), true);
+  		xhr.open("GET", "//api.rsbuddy.com/grandExchange?i=" + getItem(item,"id") + "&a=graph&g=30&start=" + startTime.toString(), true);
   		xhr.send();
 
       pData.length = 0;
@@ -279,7 +279,7 @@
           $(function () {
       			$('#container').highcharts(options,
       				function (chart) { // on complete
-              chart.setTitle({ text: item}, { useHTML: true, text: 'Current price: '+ numberWithCommas(currentPrice) + ' gp | ' + '<a href="https://www.ge-tracker.com/item/' + getItem(item,"id") + '" target="_blank" >Ge-Tracker</a>' }
+              chart.setTitle({ text: item}, { useHTML: true, text: 'Current price: '+ numberWithCommas(currentPrice) + ' gp | ' + '<a href="//www.ge-tracker.com/item/' + getItem(item,"id") + '" target="_blank" >Ge-Tracker</a>' }
                             );
       					});
       			Highcharts.setOptions({

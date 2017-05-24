@@ -20,7 +20,6 @@
            return doji; 
           }
       }
-  }
 
   // For updating item list via https://rsbuddy.com/exchange/names.json
   // var names = ouputfromnames.json

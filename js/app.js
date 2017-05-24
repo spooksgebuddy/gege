@@ -248,7 +248,7 @@
 
       var xhr = new XMLHttpRequest();
       xhr.onreadystatechange = process;
-  		xhr.open("GET", "//api.rsbuddy.com/grandExchange?i=" + getItem(item,"id") + "&a=graph&g=30&start=" + startTime.toString(), true);
+  		xhr.open("GET", "//api.rsbuddy.com/grandExchange?i=" + getItem(item,"id") + "&a=graph&g=10&start=" + startTime.toString(), true);
   		xhr.send();
 
       pData.length = 0;
@@ -294,7 +294,7 @@
           $(function () {
       			$('#container').highcharts(options,
       				function (chart) { // on complete
-              chart.renderer.image('https://rsbuddy.com/items/'+getItem(item,"id")+'.png', 30, 5, 36, 32).add();
+              chart.renderer.image('https://rsbuddy.com/items/'+getItem(item,"id")+'.png', 30, -13, 36, 32).add();
               chart.setTitle({ text: item}, { useHTML: true, text: 'Current price: '+ numberWithCommas(currentPrice) + ' gp | ' + '<a href="//www.ge-tracker.com/item/' + getItem(item,"id") + '" target="_blank" >Ge-Tracker</a>'+ ' | ' + '<a href="//docs.google.com/spreadsheets/d/1NXXcnCI8p5Jp1ylF-uNH-oNTn_oFbNn11_DUlHDGDCw/edit?usp=sharing" target="_blank" >Compu</a>' }
                             );
       					});

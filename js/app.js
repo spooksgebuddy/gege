@@ -12,7 +12,7 @@
     var margins = 
         if(buyPlus > sellPlus) {
            'Bullish - Buyers Control';
-          }  if else {
+          } else {
            'Bearish - Sellers Control';
           } else {
            'Doji - Equal'; 

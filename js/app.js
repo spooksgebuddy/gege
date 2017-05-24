@@ -9,14 +9,17 @@
   function returnmargin(highs, opens, lows) {
     var buyingPlus = opens + highs;
     var sellPlus = opens + lows;
-    var margins = []; 
+    var bullish = 'bullish';
+    var bearish = 'bearish';
+    var doji = 'doji';
         if(buyingPlus > sellPlus) {
-           'Bullish - Buyers Control';
+           return bullish;
           } else if(buyingPlus < sellPlus) {
-           'Bearish - Sellers Control';
+           return bearish;
           } else {
-           'Doji - Equal'; 
+           return doji; 
           }
+      }
         
   return margins;
   }

@@ -12,6 +12,8 @@
        var formatted_margins = '+' + numberWithCommas(margins);
      } else if(lows > highs) {
        var formatted_margins = '-' + numberWithCommas(margins);
+     } else {
+       var formatted_margins = '-' + numberwithCommas(margins); 
      }
   return formatted_margins;
   }

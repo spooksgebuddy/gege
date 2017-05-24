@@ -7,11 +7,11 @@
   var sData = [];
 
   function returnmargin(highs, overalls, lows) {
-    var buyingPlus = lows - highs;
-    var sellPlus = lows - overalls;
-    var bullish = 'bullish';
-    var bearish = 'bearish';
-    var doji = 'doji';
+    var buyingPlus = overalls - highs;
+    var sellPlus = overalls - lows;
+    var bullish = 'bullish: Buyers';
+    var bearish = 'bearish: Sellers';
+    var doji = 'doji: Equal';
         if(buyingPlus > sellPlus) {
            return bullish;
           } else if(buyingPlus < sellPlus) {
@@ -80,10 +80,10 @@
             var d = new Date(p.x).toString();
             if(typeof p.close !== "undefined") {
             return '<b>' + d.substring(0, 21) + '<b/><br/>'+
-                   'High: ' + numberWithCommas(p.high) + ' GP<br/>'+
                    'Overall: ' + numberWithCommas(p.open) +' GP<br/>'+
-                   'Low: ' + numberWithCommas(p.low) + ' GP<br/>'+
-                   'Control ' + returnmargin(p.high, p.open, p.low);
+                   'Offer/Buying: ' + numberWithCommas(p.high) + ' GP<br/>'+
+                   'Sell: ' + numberWithCommas(p.low) + ' GP<br/>'+
+                   'Control ' + returnmargin(p.high, p.open, p.low) + ' Control';
               } else {
             return '<b>' + d.substring(0, 21) + '<b/><br/>'+
                    'Volume: ' + numberWithCommas(p.y) + ' traded<br/>';
@@ -265,8 +265,8 @@
   						pData.push({
   							"x" : resp[i].ts,
   							"open" : resp[i].overallPrice,
-  							"high" : resp[i].sellingPrice,
-  							"low" : resp[i].buyingPrice,
+  							"high" : resp[i].buyingPrice,
+  							"low" : resp[i].sellingPrice,
   							"close" : resp[i].overallPrice
   						})
   					} else {

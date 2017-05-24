@@ -6,12 +6,8 @@
   var bData = [];
   var sData = [];
 
-  function returnmargin(opens, closes){
-    var margins = 0; 
-    if (opens > closes) {
-          margins = 'Bullish - sellers control'
-     } else {
-          margins = 'Bearish - buyers control'
+  function returnmargin(highs, lows){
+     var margins = highs - lows;
   return margins;
   }
 
@@ -78,7 +74,7 @@
                    'High: ' + numberWithCommas(p.high) + ' GP<br/>'+
                    'Low: ' + numberWithCommas(p.low) + ' GP<br/>'+
                    'Close: ' + numberWithCommas(p.close) + ' GP<br/>'+
-                   'Margin: ' + numberWithCommas(returnmargin(p.open, p.close)) + ' GP<br/>';
+                   'Margin: ' + numberWithCommas(returnmargin(p.high, p.low)) + ' GP<br/>';
               } else {
             return '<b>' + d.substring(0, 21) + '<b/><br/>'+
                    'Volume: ' + numberWithCommas(p.y) + ' traded<br/>';
@@ -90,7 +86,7 @@
     },
     "rangeSelector" : {
         "selected" : 1, 
-        "inputEnabled": true,
+        "inputEnabled": false,
         "buttonPosition": {x:160,y:50 },
         "allButtonsEnabled": true,
         "enabled": true,
@@ -262,7 +258,7 @@
   							"open" : resp[i].overallPrice,
   							"high" : resp[i].sellingPrice,
   							"low" : resp[i].buyingPrice,
-  							"close" : resp[i].overallPrice,
+  							"close" : resp[i].overallPrice
   						})
   					} else {
   						pData.push({

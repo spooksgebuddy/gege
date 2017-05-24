@@ -118,7 +118,7 @@
         }]
     },
     "xAxis": {
-      "type": "datetime"
+      "type": "datetime",
       "tickInterval": 600000
     },
     "yAxis": [{

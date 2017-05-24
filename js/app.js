@@ -255,8 +255,8 @@
   					if(resp[i].sellingPrice > resp[i].buyingPrice) {
   						pData.push({
   							"x" : resp[i].ts,
-  							"open" : resp[i].overallPrice,
-  							"high" : resp[i].sellingPrice,
+  							"open" : resp[i].sellingPrice,
+  							"high" : resp[i].overallPrice,
   							"low" : resp[i].buyingPrice,
   							"close" : resp[i].sellingPrice
   						})

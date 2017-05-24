@@ -258,7 +258,7 @@
   							"open" : resp[i].sellingPrice,
   							"high" : resp[i].overallPrice,
   							"low" : resp[i].buyingPrice,
-  							"close" : resp[i].sellingPrice
+  							"close" : resp[i].overallPrice
   						})
   					} else {
   						pData.push({

@@ -9,9 +9,9 @@
   function returnmargin(highs, lows){
      var margins = highs - lows;
      if(highs > lows) {
-       var formatted_margins = '<b>+<font color="green">' + numberWithCommas(margins) + '</font></b>';
+       var formatted_margins = '+' + numberWithCommas(margins);
      } else {
-       var formatted_margins = '<b>-<font color="red">' + numberWithCommas(margins) + '</font></b>';
+       var formatted_margins = '-' + numberWithCommas(margins);
      }
   return formatted_margins;
   }

@@ -13,7 +13,7 @@
      } else if(lows > highs) {
        var formatted_margins = '-' + numberWithCommas(margins);
      } else {
-       var formatted_margins = '~' + numberwithCommas(margins); 
+       var formatted_margins = '0'; 
      }
   return formatted_margins;
   }

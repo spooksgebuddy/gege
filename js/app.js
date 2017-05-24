@@ -174,7 +174,7 @@
     },
     "series": [
       {
-        "type": 'ohlc',
+        "type": 'candlestick',
         "name": "Prices",
         "data": pData
       },{

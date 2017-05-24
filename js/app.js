@@ -10,7 +10,7 @@
      var margins = highs - lows;
      if(highs > lows) {
        var formatted_margins = '+' + numberWithCommas(margins);
-     } else {
+     } else if(lows > highs) {
        var formatted_margins = '-' + numberWithCommas(margins);
      }
   return formatted_margins;

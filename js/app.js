@@ -118,7 +118,6 @@
         }]
     },
     "xAxis": {
-      "tickInterval": 60 * 1000,
       "type": "datetime",
       
     },
@@ -250,7 +249,7 @@
 
       var xhr = new XMLHttpRequest();
       xhr.onreadystatechange = process;
-  		xhr.open("GET", "//api.rsbuddy.com/grandExchange?i=" + getItem(item,"id") + "&a=graph&g=5&start=" + startTime.toString(), true);
+  		xhr.open("GET", "//api.rsbuddy.com/grandExchange?i=" + getItem(item,"id") + "&a=graph&g=30&start=" + startTime.toString(), true);
   		xhr.send();
 
       pData.length = 0;

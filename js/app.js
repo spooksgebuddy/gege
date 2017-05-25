@@ -249,7 +249,7 @@
 
       var xhr = new XMLHttpRequest();
       xhr.onreadystatechange = process;
-  		xhr.open("GET", "//api.rsbuddy.com/grandExchange?i=" + getItem(item,"id") + "&a=graph&g=10&start=" + startTime.toString(), true);
+  		xhr.open("GET", "//api.rsbuddy.com/grandExchange?i=" + getItem(item,"id") + "&a=graph&g=15&start=" + startTime.toString(), true);
   		xhr.send();
 
       pData.length = 0;

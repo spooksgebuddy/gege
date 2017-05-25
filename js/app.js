@@ -180,7 +180,7 @@
                           chart.addPlotLine({
                               value: this.low,
                               color: '#FF0000',
-                              width: 1,
+                              width: 3,
                               id: 'plot-line-1'
                           });
                     }

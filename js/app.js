@@ -118,6 +118,7 @@
         }]
     },
     "xAxis": {
+      "tickInterval": 60 * 1000,
       "type": "datetime",
       
     },
@@ -185,7 +186,6 @@
                           });
                     }
                 }
-            "pointInterval": 600000
             }
         }
     },

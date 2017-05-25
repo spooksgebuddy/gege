@@ -95,7 +95,7 @@
     },
     "rangeSelector" : {
         "selected" : 1, 
-        "inputEnabled": true,
+        "inputEnabled": false,
         "buttonPosition": {x:160,y:50 },
         "allButtonsEnabled": true,
         "enabled": true,

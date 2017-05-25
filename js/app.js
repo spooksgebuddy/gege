@@ -266,18 +266,18 @@
   					if(resp[i].sellingPrice > resp[i].buyingPrice) {
   						pData.push({
   							"x" : resp[i].ts,
-  							"open" : resp[i].overallPrice,
-  							"high" : resp[i].buyingPrice,
-  							"low" : resp[i].sellingPrice,
-  							"close" : resp[i].overallPrice
+  							"open" : resp[i].sellingPrice,
+  							"high" : resp[i].overallPrice,
+  							"low" : resp[i].overallPrice,
+  							"close" : resp[i].buyingPrice
   						})
   					} else {
   						pData.push({
   							"x" : resp[i].ts,
-  							"open" : resp[i].overallPrice,
-  							"high" : resp[i].buyingPrice,
-  							"low" : resp[i].sellingPrice,
-  							"close" : resp[i].overallPrice
+  							"open" : resp[i].buyingPrice,
+  							"high" : resp[i].overallPrice,
+  							"low" : resp[i].overallPrice,
+  							"close" : resp[i].sellingPrice
   						})
   					}
 

@@ -6,9 +6,9 @@
   var bData = [];
   var sData = [];
 
-  function returnmargin(highs, overalls, lows) {
-    var buyingPlus = overalls - highs;
-    var sellPlus = overalls - lows;
+  function returnmargin(buyings, overalls, sellings) {
+    var buyingPlus = overalls - buyings;
+    var sellPlus = overalls - sellings;
     var bullish = 'Bullish: Buyers';
     var bearish = 'Bearish: Sellers';
     var doji = 'Doji: Equal';
@@ -83,7 +83,8 @@
                    'Open: ' + numberWithCommas(p.high) + ' GP<br/>'+
                    'Overall: ' + numberWithCommas(p.open) +' GP<br/>'+
                    'Low: ' + numberWithCommas(p.low) + ' GP<br/>'+
-                   returnmargin(p.close, p.low, p.sell) + ' Control High';
+                   'Close ' + numberWithCommas(p.close) + ' GP<br/>' +
+                   returnmargin(p.close, p.low, p.open) + ' Control High';
               } else {
             return '<b>' + d.substring(0, 21) + '<b/><br/>'+
                    'Volume: ' + numberWithCommas(p.y) + ' traded<br/>';

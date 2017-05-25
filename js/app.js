@@ -105,7 +105,7 @@
             "text" : '1h'
         }, {
           "type" : 'hour',
-          "count" : 1,
+          "count" : 12,
           "text" : '12h'
       }, {
             "type" : 'day',
@@ -128,7 +128,7 @@
                 month: '%Y-%b',
                 year: '%Y'
             },
-      minTickInterval: 600000
+      minTickInterval: 100000
       
     },
     "yAxis": [{

@@ -267,17 +267,17 @@
   						pData.push({
   							"x" : resp[i].ts,
   							"open" : resp[i].sellingPrice,
-  							"high" : resp[i].overallPrice,
+  							"high" : resp[i].sellingPrice,
   							"low" : resp[i].overallPrice,
   							"close" : resp[i].buyingPrice
   						})
   					} else {
   						pData.push({
   							"x" : resp[i].ts,
-  							"open" : resp[i].buyingPrice,
-  							"high" : resp[i].overallPrice,
+  							"open" : resp[i].sellingPrice,
+  							"high" : resp[i].buyingPrice,
   							"low" : resp[i].overallPrice,
-  							"close" : resp[i].sellingPrice
+  							"close" : resp[i].buyingPrice
   						})
   					}
 

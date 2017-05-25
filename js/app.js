@@ -105,7 +105,7 @@
             "text" : '1h'
         }, {
           "type" : 'hour',
-          "count" : 12,
+          "count" : 1,
           "text" : '12h'
       }, {
             "type" : 'day',

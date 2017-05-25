@@ -21,7 +21,7 @@
           }
       }
 
-  // For updating item list via https://rsbuddy.com/exchange/names.json
+  // For updating item lit via https://rsbuddy.com/exchange/names.json
   // var names = ouputfromnames.json
   // var newnames = [];
   // var objprop = Object.keys(names);
@@ -118,7 +118,8 @@
         }]
     },
     "xAxis": {
-      "type": "datetime"
+      "type": "datetime",
+      "minTickInterval": "600000"
       
     },
     "yAxis": [{

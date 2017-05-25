@@ -36,7 +36,7 @@
       "zoomType": 'x'
     },
     "exporting": {
-        "enabled": false
+        "enabled": true
     },
     "credits": {
         "text": 'Powerd by OSbuddy GE API',
@@ -171,6 +171,7 @@
        "series": { 
           "allowPointSelect": true,
           "turboThreshold": 1000000,
+          
           "point": {
               "events": {
                   click: function () {
@@ -180,7 +181,7 @@
                           chart.addPlotLine({
                               value: this.low,
                               color: '#FF0000',
-                              width: 3,
+                              width: 1,
                               id: 'plot-line-1'
                           });
                     }

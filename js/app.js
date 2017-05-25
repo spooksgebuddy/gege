@@ -80,10 +80,10 @@
             var d = new Date(p.x).toString();
             if(typeof p.close !== "undefined") {
             return '<b>' + d.substring(0, 21) + '<b/><br/>'+
-                   'Open/Selling: ' + numberWithCommas(p.high) + ' GP<br/>'+
-                   'Open: ' + numberWithCommas(p.open) +' GP<br/>'+
+                   'High: ' + numberWithCommas(p.high) + ' GP<br/>'+
+                   'Selling: ' + numberWithCommas(p.open) +' GP<br/>'+
                    'Overall: ' + numberWithCommas(p.low) + ' GP<br/>'+
-                   'Close/Buying: ' + numberWithCommas(p.close) + ' GP<br/>' +
+                   'Buying: ' + numberWithCommas(p.close) + ' GP<br/>' +
                    returnmargin(p.close, p.low, p.open) + ' Control High';
               } else {
             return '<b>' + d.substring(0, 21) + '<b/><br/>'+

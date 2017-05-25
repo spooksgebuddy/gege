@@ -95,7 +95,7 @@
     },
     "rangeSelector" : {
         "selected" : 1, 
-        "inputEnabled": false,
+        "inputEnabled": true,
         "buttonPosition": {x:160,y:50 },
         "allButtonsEnabled": true,
         "enabled": true,
@@ -250,7 +250,7 @@
 
       var xhr = new XMLHttpRequest();
       xhr.onreadystatechange = process;
-  		xhr.open("GET", "//api.rsbuddy.com/grandExchange?i=" + getItem(item,"id") + "&a=graph&g=10&start=" + startTime.toString(), true);
+  		xhr.open("GET", "//api.rsbuddy.com/grandExchange?i=" + getItem(item,"id") + "&a=graph&g=5&start=" + startTime.toString(), true);
   		xhr.send();
 
       pData.length = 0;

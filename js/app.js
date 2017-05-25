@@ -119,7 +119,16 @@
     },
     "xAxis": {
       "type": "datetime",
-      "minTickInterval": "600000"
+      dateTimeLabelFormats: {
+                second: '<br/>%H:%M:%S',
+                minute: '<br/>%H:%M:%S',
+                hour: '<br/>%H:%M:%S',
+                day: '%Y<br/>%b-%d',
+                week: '%Y<br/>%b-%d',
+                month: '%Y-%b',
+                year: '%Y'
+            },
+      minTickInterval: 600000
       
     },
     "yAxis": [{

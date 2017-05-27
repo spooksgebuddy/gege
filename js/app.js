@@ -298,7 +298,7 @@
       			$('#container').highcharts(options,
       				function (chart) { // on complete
               chart.renderer.image('https://rsbuddy.com/items/'+getItem(item,"id")+'.png', 85, 15, 36, 32).add();
-              chart.setTitle({ text: item}, { useHTML: true, text: 'Current price: '+ numberWithCommas(currentPrice) + ' gp | ' + '<a href="//www.ge-tracker.com/item/' + getItem(item,"id") + '" target="_blank" >Ge-Tracker</a>'+ ' | ' + '<a href="//docs.google.com/spreadsheets/d/1NXXcnCI8p5Jp1ylF-uNH-oNTn_oFbNn11_DUlHDGDCw/edit?usp=sharing" target="_blank" >Compu</a>' }
+              chart.setTitle({ text: item}, { useHTML: true, text: 'Current price: '+ numberWithCommas(currentPrice) + ' gp | ' + '<a href="//www.ge-tracker.com/item/' + getItem(item,"id") + '" target="_blank" >Ge-Tracker</a>' + ' | ' + '<a href="//rsbuddy.com/exchange?id=' + getItem(item,"id") + '" target="_blank" >RSBuddy</a>' + ' | ' + '<a href="//docs.google.com/spreadsheets/d/1NXXcnCI8p5Jp1ylF-uNH-oNTn_oFbNn11_DUlHDGDCw/edit?usp=sharing" target="_blank" >Compu</a>' }
                             );
       					});
       			Highcharts.setOptions({

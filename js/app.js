@@ -9,12 +9,12 @@
   function returnmargin(buyings, overalls, sellings) {
     var buyingPlus = overalls - buyings;
     var sellPlus = overalls - sellings;
-    var bullish = 'Bullish: Buyers';
     var bearish = 'Bearish: Sellers';
+    var bullish = 'Bullish: Buyers';
     var doji = 'Doji: Equal';
-        if(buyingPlus > sellPlus) {
+        if(buyingPlus < sellPlus) {
            return bullish;
-          } else if(buyingPlus < sellPlus) {
+          } else if(buyingPlus > sellPlus) {
            return bearish;
           } else {
            return doji; 

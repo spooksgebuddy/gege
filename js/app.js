@@ -113,6 +113,10 @@
             "count" : 1,
             "text" : '1D'
       }, {
+            "type" : 'day',
+            "count" : 7,
+            "text" : '7D'
+      }, {
             "type" : 'all',
             "count" : 1,
             "text" : 'All'
@@ -192,7 +196,7 @@
     },
     "series": [
       {
-        "type": 'ohlc',
+        "type": 'candlestick',
         "name": "Prices",
         "data": pData
       },{

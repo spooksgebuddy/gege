@@ -192,7 +192,7 @@
     },
     "series": [
       {
-        "type": 'candlestick',
+        "type": 'ohlc',
         "name": "Prices",
         "data": pData
       },{
